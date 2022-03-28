@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Penghitungan Konsumsi Bahan Bakar</string>
+    <string name="jarakAwal">Jarak Awal (km)</string>
+    <string name="jarakAkhir">Jarak Akhir (km)</string>
+    <string name="bensin">Jumlah Bensin (liter)</string>
+    <string name="hitung">Hitung</string>
+</resources>
