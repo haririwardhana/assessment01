@@ -5,4 +5,6 @@
     <string name="bensin">Jumlah Bensin (liter)</string>
     <string name="hitung">Hitung</string>
     <string name="hapus">Refresh</string>
+    <string name="hasil_jumlah">Konsumsi Bensin : %1$.2f km/liter</string>
+    <string name="km">Km/liter</string>
 </resources>

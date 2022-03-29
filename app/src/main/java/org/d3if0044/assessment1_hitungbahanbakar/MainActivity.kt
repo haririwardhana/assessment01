@@ -40,8 +40,12 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this,"Lengkapi data.",Toast.LENGTH_LONG).show()
             return
         }
-        if (awal.toFloat() > akhir.toFloat())
-            Toast.makeText(this,"Jarak tidak valid",Toast.LENGTH_LONG).show()
+        if (awal.toFloat() > akhir.toFloat()) {
+            Toast.makeText(this, "Jarak tidak valid", Toast.LENGTH_LONG).show()
             return
+        }
+        val total = (akhir.toFloat() - awal.toFloat()) / jumlah.toFloat()
+
+        binding.hasilJumlah.text = getString(R.string.hasil_jumlah, total)
     }
 }
