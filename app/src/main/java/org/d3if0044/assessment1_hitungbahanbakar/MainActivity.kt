@@ -14,6 +14,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.buttonHitung.setOnClickListener { penghitungan() }
+        binding.buttonClear.setOnClickListener {
+            binding.hasilKategori.text = ""
+            binding.hasilJumlah.text = ""
+            binding.inputJarakAwal.text = null
+            binding.inputJarakAkhir.text = null
+            binding.inputBensin.text = null
+        }
 
     }
 
