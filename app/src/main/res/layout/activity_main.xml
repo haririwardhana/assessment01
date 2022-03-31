@@ -134,7 +134,7 @@
             tools:text="Konsumsi Bensin : n Km/L" />
 
         <TextView
-            android:id="@+id/hasilKategori"
+            android:id="@+id/hasilJarak"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -142,7 +142,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hasilJumlah"
-            tools:text="Kategori : Irit" />
+            tools:text="jarak yang di tempuh : n Km" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.buttonHitung.setOnClickListener { penghitungan() }
         binding.buttonClear.setOnClickListener {
-            binding.hasilKategori.text = ""
+            binding.hasilJarak.text = ""
             binding.hasilJumlah.text = ""
             binding.inputJarakAwal.text = null
             binding.inputJarakAkhir.text = null
@@ -44,8 +44,10 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Jarak tidak valid", Toast.LENGTH_LONG).show()
             return
         }
-        val total = (akhir.toFloat() - awal.toFloat()) / jumlah.toFloat()
+        val jarak = akhir.toFloat() - awal.toFloat()
+        val total = (jarak) / jumlah.toFloat()
 
         binding.hasilJumlah.text = getString(R.string.hasil_jumlah, total)
+        binding.hasilJarak.text = getString(R.string.hasil_jarak, jarak)
     }
 }
