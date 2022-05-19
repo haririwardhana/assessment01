@@ -142,7 +142,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/hasilJumlah"
-            tools:text="jarak yang di tempuh : n Km" />
+            tools:text="Jarak yang di tempuh : n Km" />
+
+        <TextView
+            android:id="@+id/kategoriView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hasilJarak"
+            tools:text="Termasuk golongan :" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
