@@ -1,4 +1,4 @@
-package org.d3if0044.assessment1_hitungbahanbakar.ui.main
+package org.d3if0044.assessment1_hitungbahanbakar.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

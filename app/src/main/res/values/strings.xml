@@ -12,4 +12,17 @@
     <string name="irit">Irit</string>
     <string name="boros">Boros</string>
     <string name="kategori">Termasuk golongan : %1$s</string>
+    <string name="penjelasan">Aplikasi ini akan melakukan input data berupa (angka) jarak dengan satuan kilometer
+        dan jumlah bahan bakar yang digunakan dengan satuan liter,
+        selisih dari jarak awal dan jarak akhir akan menjadi sebuah angka jarak dan akan melakukan proses penghitungan
+        menggunakan rumus yang sesuai yaitu jarak yang ditempuh akan dibagi dengan jumlah bensin yang digunakan,
+        maka akan menghasilkan output data dengan satuan km/l.\n\nUntuk menghitung ini pastikan
+        pada saat mencatat jarak awal (lihat pada odometer kendaraan)pastikan kondisi tangki bahan bakar terisi penuh,
+        dan setelah anda berjalan ke titik selanjutnya isi kembali bensin kendaraan hingga penuh kembali,
+        lalu catat jarak yang terdapat pada odometer kendaraan dan jumlah bensin yang di isi,
+        masukan ketiga data tersebut ke form isian lalu klik tombol hitung akan menghasilkan data konsumsi bahan bakar.
+</string>
+    <string name="deskrip">Deskripsi Aplikasi</string>
+    <string name="bagikan">Bagikan</string>
+    <string name="bagikan_template"> %1$s\n%2$s\n%3$s</string>
 </resources>
