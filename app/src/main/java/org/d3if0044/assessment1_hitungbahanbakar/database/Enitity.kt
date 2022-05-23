@@ -8,6 +8,7 @@ data class Enitity(
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0L,
     var tanggal: Long = System.currentTimeMillis(),
-    var jarak: Float,
-    var total: Float
+    var jarak:Float,
+    var bensin: Float,
+    var jenis: Boolean
 )

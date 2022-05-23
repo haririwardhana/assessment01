@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_hitungFragment_to_penjelasanFragment"
             app:destination="@id/penjelasanFragment" />
+        <action
+            android:id="@+id/action_hitungFragment_to_listFragment"
+            app:destination="@id/listFragment" />
     </fragment>
     <fragment
         android:id="@+id/penjelasanFragment"
         android:name="org.d3if0044.assessment1_hitungbahanbakar.ui.PenjelasanFragment"
         android:label="@string/deskrip"
         tools:layout="@layout/fragment_penjelasan"/>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="org.d3if0044.assessment1_hitungbahanbakar.ui.listdata.listFragment"
+        android:label="@string/lihat"
+        tools:layout="@layout/fragment_listdata"/>
 </navigation>

@@ -80,15 +80,42 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/button"
+        <TextView
+            android:id="@+id/viewJenis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginStart="32dp"
-            android:text="@string/hitung"
-            app:layout_constraintStart_toStartOf="@+id/hint_bensin"
-            app:layout_constraintTop_toBottomOf="@+id/hint_bensin" />
+            android:layout_marginStart="16dp"
+            android:text="@string/jenis"
+            app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/radioGroup" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/viewJenis"
+            app:layout_constraintTop_toBottomOf="@+id/hint_bensin">
+
+            <RadioButton
+                android:id="@+id/rbtMobil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="16dp"
+                android:text="@string/mobil" />
+
+            <RadioButton
+                android:id="@+id/rbtMotor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/motor" />
+        </RadioGroup>
 
         <Button
             android:id="@+id/buttonHitung"
@@ -97,8 +124,8 @@
             android:layout_marginTop="16dp"
             android:layout_marginStart="32dp"
             android:text="@string/hitung"
-            app:layout_constraintStart_toStartOf="@+id/hint_bensin"
-            app:layout_constraintTop_toBottomOf="@+id/hint_bensin" />
+            app:layout_constraintStart_toStartOf="@+id/viewJenis"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
         <Button
             android:id="@+id/buttonClear"
@@ -108,7 +135,7 @@
             android:layout_marginStart="64dp"
             android:text="@string/hapus"
             app:layout_constraintStart_toEndOf="@+id/buttonHitung"
-            app:layout_constraintTop_toBottomOf="@+id/hint_bensin" />
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
         <View
             android:id="@+id/batas"

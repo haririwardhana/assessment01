@@ -19,10 +19,10 @@ class HitungFragment : Fragment() {
     private lateinit var binding: FragmentHitungBinding
 
 
-    private val viewModel: MainViewModel by lazy {
+    private val viewModel: HitungViewModel by lazy {
         val db = DbBahanBakar.getInstance(requireContext())
         val factory = HitungViewModelFactory(db.dao)
-        ViewModelProvider(this, factory)[MainViewModel::class.java]
+        ViewModelProvider(this, factory)[HitungViewModel::class.java]
     }
 
     override fun onCreateView(
@@ -48,10 +48,6 @@ class HitungFragment : Fragment() {
         }
         binding.buttonBagi.setOnClickListener { bagiData() }
         viewModel.getHasilHitung().observe(requireActivity(), {tampilTotal(it) })
-        viewModel.data.observe(viewLifecycleOwner, {
-            if (it == null) return@observe
-            Log.d("HitungFragment", "Data tersimpan. ID = ${it.id}")
-        })
     }
 
     private fun bagiData(){
@@ -72,9 +68,15 @@ class HitungFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.menu_desc){
-            findNavController().navigate(R.id.action_hitungFragment_to_penjelasanFragment)
+        when(item.itemId){
+            R.id.menu_desc -> {
+                findNavController().navigate(R.id.action_hitungFragment_to_penjelasanFragment)
             return true
+            }
+            R.id.menu_list ->{
+                findNavController().navigate(R.id.action_hitungFragment_to_listFragment)
+            return true
+            }
         }
         return super.onOptionsItemSelected(item)
     }
@@ -99,7 +101,12 @@ class HitungFragment : Fragment() {
             Toast.makeText(context, "Jarak tidak valid", Toast.LENGTH_LONG).show()
             return
         }
-        viewModel.hitungTotal(awal.toFloat(),akhir.toFloat(),jumlah.toFloat())
+        val selectedId = binding.radioGroup.checkedRadioButtonId
+        if (selectedId == -1) {
+            Toast.makeText(context, R.string.jenis_kosong, Toast.LENGTH_LONG).show()
+            return
+        }
+            viewModel.hitungTotal(awal.toFloat(),akhir.toFloat(),jumlah.toFloat(), selectedId == R.id.rbtMobil)
     }
     private fun tampilTotal(result: HasilHitung?){
         if (result == null) return
@@ -108,8 +115,6 @@ class HitungFragment : Fragment() {
         binding.hasilJarak.text = getString(R.string.hasil_jarak, result.jarak)
         binding.buttonGroup.visibility = View.VISIBLE
     }
-
-
     private fun kategoriLabel(kategori: KategoriBB): String{
         val stringRes = when (kategori) {
             KategoriBB.SEDANG -> R.string.sedang

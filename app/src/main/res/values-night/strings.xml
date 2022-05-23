@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="bagikan">Bagikan</string>
+    <string name="lihat">Riwayat</string>
+    <string name="listData">Riwayat Data</string>
+    <string name="jenis">Jenis Kendaraan</string>
+    <string name="jenis_kosong">Jenis Kendaraan Kosong</string>
 </resources>

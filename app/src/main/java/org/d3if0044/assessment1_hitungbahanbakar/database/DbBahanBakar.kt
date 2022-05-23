@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [Enitity::class], version = 1, exportSchema = false)
+@Database(entities = [Enitity::class], version = 2, exportSchema = false)
 abstract class DbBahanBakar : RoomDatabase() {
     abstract val dao: DbDao
 
@@ -20,7 +20,8 @@ abstract class DbBahanBakar : RoomDatabase() {
                     instance = Room.databaseBuilder(
                         context.applicationContext,DbBahanBakar::class.java,
                         "bahanBakar.db"
-                    ).fallbackToDestructiveMigration().build()
+                    ).fallbackToDestructiveMigration()
+                        .build()
                     INSTANCE = instance
                 }
                 return instance

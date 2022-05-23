@@ -10,6 +10,6 @@ interface DbDao {
     @Insert
     fun insert(bahanBakar: Enitity)
 
-    @Query("SELECT * FROM bahanBakar ORDER BY id DESC LIMIT 1")
-    fun getLastData(): LiveData<Enitity?>
+    @Query("SELECT * FROM bahanBakar ORDER BY id DESC ")
+    fun getLastData(): LiveData<List<Enitity>>
 }

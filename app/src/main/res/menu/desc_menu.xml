@@ -5,7 +5,10 @@
 <item
         android:id="@+id/menu_desc"
         android:title="@string/deskrip"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_list"
+        android:title="@string/listData"
         app:showAsAction="never"
         />
-
 </menu>

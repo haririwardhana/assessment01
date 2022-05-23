@@ -25,4 +25,14 @@
     <string name="deskrip">Deskripsi Aplikasi</string>
     <string name="bagikan">Bagikan</string>
     <string name="bagikan_template"> %1$s\n%2$s\n%3$s</string>
+    <string name="kosong">Data Kosong</string>
+    <string name="lihat">Riwayat</string>
+    <string name="listData">Riwayat Data</string>
+    <string name="hasil_hitung">Konsumsi Bahan Bakar: %1$.2f km/liter - %2$s</string>
+    <string name="detail_hitung">Jarak: %1$.1f km - Bensin: %2$.1f liter - %3$s</string>
+<!--    <string name="jenis_hitung">Jenis: %1$s/string>-->
+    <string name="jenis">Jenis Kendaraan</string>
+    <string name="mobil">Mobil</string>
+    <string name="motor">Motor</string>
+    <string name="jenis_kosong">Jenis Kendaraan Tidak Valid</string>
 </resources>

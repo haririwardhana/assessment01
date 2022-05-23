@@ -3,9 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MATA KULIAH/Sem. 4/Mobpro/Assessment1HitungBahanBakar/app/src/main/res/drawable/circle_bg.xml" value="0.1265" />
         <entry key="..\:/MATA KULIAH/Sem. 4/Mobpro/Assessment1HitungBahanBakar/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/MATA KULIAH/Sem. 4/Mobpro/Assessment1HitungBahanBakar/app/src/main/res/layout/fragment_hitung.xml" value="0.1" />
+        <entry key="..\:/MATA KULIAH/Sem. 4/Mobpro/Assessment1HitungBahanBakar/app/src/main/res/layout/fragment_hitung.xml" value="0.18" />
+        <entry key="..\:/MATA KULIAH/Sem. 4/Mobpro/Assessment1HitungBahanBakar/app/src/main/res/layout/fragment_listdata.xml" value="0.25" />
         <entry key="..\:/MATA KULIAH/Sem. 4/Mobpro/Assessment1HitungBahanBakar/app/src/main/res/layout/fragment_penjelasan.xml" value="0.1921875" />
+        <entry key="..\:/MATA KULIAH/Sem. 4/Mobpro/Assessment1HitungBahanBakar/app/src/main/res/layout/item_listdata.xml" value="0.1921875" />
         <entry key="..\:/MATA KULIAH/Sem. 4/Mobpro/Assessment1HitungBahanBakar/app/src/main/res/menu/desc_menu.xml" value="0.1921875" />
       </map>
     </option>
