@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import org.d3if0044.assessment1_hitungbahanbakar.R
+import org.d3if0044.assessment1_hitungbahanbakar.database.DbDao
 import org.d3if0044.assessment1_hitungbahanbakar.database.Enitity
 import org.d3if0044.assessment1_hitungbahanbakar.databinding.ItemListdataBinding
 import org.d3if0044.assessment1_hitungbahanbakar.model.KategoriBB
@@ -35,6 +36,7 @@ class listAdapter : ListAdapter<Enitity, listAdapter.ViewHolder>(DIFF_CALLBACK) 
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(getItem(position))
+            
     }
 
 

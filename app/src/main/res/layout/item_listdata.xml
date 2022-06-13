@@ -40,7 +40,7 @@
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="@+id/viewTanggal"
         app:layout_constraintTop_toBottomOf="@+id/viewTanggal"
-        tools:text="Konsumsi Bahan Bakar: 16,20 km/liter - Irit" />
+        tools:text="Hasil: 16,20 km/liter - Irit" />
 
     <TextView
         android:id="@+id/viewDetail"
@@ -52,20 +52,20 @@
         app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="@+id/viewTanggal"
         app:layout_constraintTop_toBottomOf="@+id/viewHasil"
-        app:layout_constraintVertical_bias="0.04"
         tools:text="Jarak: 76,00 km - Bensin: 5 liter - Mobil" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/viewJenis"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="4dp"-->
-<!--        android:layout_marginBottom="16dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintHorizontal_chainStyle="spread"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/viewTanggal"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/viewDetail"-->
-<!--        tools:text="Jenis: Mobil" />-->
-
+    <TextView
+        android:id="@+id/hapusList"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_baseline_delete_forever_24"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

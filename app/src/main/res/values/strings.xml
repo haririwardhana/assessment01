@@ -28,11 +28,17 @@
     <string name="kosong">Data Kosong</string>
     <string name="lihat">Riwayat</string>
     <string name="listData">Riwayat Data</string>
-    <string name="hasil_hitung">Konsumsi Bahan Bakar: %1$.2f km/liter - %2$s</string>
+    <string name="hasil_hitung">Hasil: %1$.2f km/liter - %2$s</string>
     <string name="detail_hitung">Jarak: %1$.1f km - Bensin: %2$.1f liter - %3$s</string>
 <!--    <string name="jenis_hitung">Jenis: %1$s/string>-->
     <string name="jenis">Jenis Kendaraan</string>
     <string name="mobil">Mobil</string>
     <string name="motor">Motor</string>
     <string name="jenis_kosong">Jenis Kendaraan Tidak Valid</string>
+    <string name="hapus_histori">Hapus</string>
+    <string name="konfirmasi_hapus">Hapus semua ?</string>
+    <string name="konfirmasi_hapus_satu">Hapus data ?</string>
+    <string name="hapus_list">HAPUS</string>
+    <string name="batal">BATAL</string>
+    <string name="detail">lihat List</string>
 </resources>

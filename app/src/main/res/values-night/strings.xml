@@ -5,4 +5,6 @@
     <string name="listData">Riwayat Data</string>
     <string name="jenis">Jenis Kendaraan</string>
     <string name="jenis_kosong">Jenis Kendaraan Kosong</string>
+    <string name="hapus_histori">Hapus</string>
+    <string name="detail">lihatList</string>
 </resources>

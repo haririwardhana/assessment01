@@ -1,15 +1,17 @@
 package org.d3if0044.assessment1_hitungbahanbakar.ui.listdata
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import org.d3if0044.assessment1_hitungbahanbakar.R
 import org.d3if0044.assessment1_hitungbahanbakar.database.DbBahanBakar
+import org.d3if0044.assessment1_hitungbahanbakar.database.Enitity
 import org.d3if0044.assessment1_hitungbahanbakar.databinding.FragmentListdataBinding
+import java.text.FieldPosition
 
 class listFragment : Fragment() {
 
@@ -28,6 +30,7 @@ class listFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentListdataBinding.inflate(layoutInflater, container,false)
+        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -43,5 +46,23 @@ class listFragment : Fragment() {
                 View.VISIBLE else View.GONE
             myAdapter.submitList(it)
         })
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.hapus_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == R.id.menu_hapus){
+            hapusSemua()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+    private fun hapusSemua(){
+        MaterialAlertDialogBuilder(requireContext()).setMessage(R.string.konfirmasi_hapus)
+            .setPositiveButton(getString(R.string.hapus_list)) {_, _ -> viewModel.hapusSemua()
+            }.setNegativeButton(getString(R.string.batal)) { dialog, _ -> dialog.cancel()}.show()
     }
 }

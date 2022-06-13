@@ -8,8 +8,13 @@ import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.asLiveData
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import org.d3if0044.assessment1_hitungbahanbakar.R
+import org.d3if0044.assessment1_hitungbahanbakar.data.SettingDataStore
+import org.d3if0044.assessment1_hitungbahanbakar.data.dataStore
 import org.d3if0044.assessment1_hitungbahanbakar.database.DbBahanBakar
 import org.d3if0044.assessment1_hitungbahanbakar.databinding.FragmentHitungBinding
 import org.d3if0044.assessment1_hitungbahanbakar.model.HasilHitung
@@ -17,6 +22,8 @@ import org.d3if0044.assessment1_hitungbahanbakar.model.KategoriBB
 
 class HitungFragment : Fragment() {
     private lateinit var binding: FragmentHitungBinding
+    private var isLinearLayoutManager = true
+    private lateinit var layoutDataStore: SettingDataStore
 
 
     private val viewModel: HitungViewModel by lazy {
@@ -36,6 +43,7 @@ class HitungFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         binding.buttonHitung.setOnClickListener { penghitungan() }
         binding.buttonClear.setOnClickListener {
             binding.hasilJarak.text = ""
@@ -47,9 +55,25 @@ class HitungFragment : Fragment() {
             binding.buttonGroup.visibility = View.GONE
         }
         binding.buttonBagi.setOnClickListener { bagiData() }
-        viewModel.getHasilHitung().observe(requireActivity(), {tampilTotal(it) })
-    }
+        binding.buttonDetail.setOnClickListener {
+            findNavController().navigate(R.id.action_hitungFragment_to_listFragment)
+            return@setOnClickListener
+        }
+        layoutDataStore = SettingDataStore(requireContext().dataStore)
+        layoutDataStore.preferenceFlow.asLiveData()
+            .observe(viewLifecycleOwner, { value ->
+                isLinearLayoutManager = value
+                chooseLayout()
+                activity?.invalidateOptionsMenu()
+            })
 
+        viewModel.getHasilHitung().observe(requireActivity(), {tampilTotal(it) })
+
+        viewModel.scheduleUpdater(requireActivity().application)
+    }
+    private fun chooseLayout(){
+
+    }
     private fun bagiData(){
         val message = getString(R.string.bagikan_template,
             binding.hasilJumlah.text,
@@ -123,4 +147,5 @@ class HitungFragment : Fragment() {
         }
         return getString(stringRes)
     }
+
 }
