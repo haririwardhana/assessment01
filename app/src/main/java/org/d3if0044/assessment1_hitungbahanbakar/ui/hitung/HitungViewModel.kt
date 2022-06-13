@@ -42,7 +42,7 @@ class HitungViewModel(private val db: DbDao) : ViewModel() {
         val request = OneTimeWorkRequestBuilder<UpdateWorker>()
             .setInitialDelay(1, TimeUnit.MINUTES).build()
 
-        WorkManager.getInstance(app).enqueueUniqueWork("updater",
+        WorkManager.getInstance(app).enqueueUniqueWork(MainActivity.CHANNEL_ID,
             ExistingWorkPolicy.REPLACE,request)
     }
 
