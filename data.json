@@ -1,0 +1,11 @@
+[
+    {"nama": "Avanza", "hasil": "12,5-14 km per liter", "logoId": "toyota"},
+    {"nama": "Xenia", "hasil": "12,5-14 km per liter", "logoId": "daihatsu"},
+    {"nama": "Mobilio", "hasil": "22,8-28 km per liter", "logoId": "honda"},
+    {"nama": "Brio", "hasil": "20-30,1 km per liter", "logoId": "honda"},
+    {"nama": "Agya", "hasil": "19,5 km per liter", "logoId": "toyota"},
+    {"nama": "Ertiga", "hasil": " 23-30 km per liter", "logoId": "suzuki"},
+    {"nama": "Civic", "hasil": "18-20 km per liter", "logoId": "honda"},
+    {"nama": "Xpander", "hasil": "19,8 km per liter", "logoId": "mitsubishi"},
+    {"nama": "Ayla", "hasil": "18-20 km per liter", "logoId": "daihatsu"}
+]
