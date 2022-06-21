@@ -8,7 +8,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 //import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-private const val BASE_URL = "https://raw.githubusercontent.com/haririwardhana/assessment01/static-api/"
+    private const val BASE_URL = "https://raw.githubusercontent.com/haririwardhana/assessment01/static-api/"
 
     private val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
 
@@ -26,3 +26,5 @@ private const val BASE_URL = "https://raw.githubusercontent.com/haririwardhana/a
                 return "$BASE_URL$logoId.png"
             }
         }
+
+    enum class ApiStatus { LOADING, SUCCESS, FAILED }

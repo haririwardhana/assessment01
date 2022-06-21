@@ -12,5 +12,6 @@
     <string name="notif_text">Cek Aplikasi Sekarang</string>
     <string name="notif_title">Ada yang baru nih !</string>
     <string name="datahasil">Data Lainnya</string>
+    <string name="koneksi_error">Koneksi Erorr</string>
 
 </resources>
