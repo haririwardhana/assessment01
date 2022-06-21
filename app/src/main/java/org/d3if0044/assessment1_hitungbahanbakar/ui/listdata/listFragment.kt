@@ -13,7 +13,7 @@ import org.d3if0044.assessment1_hitungbahanbakar.database.Enitity
 import org.d3if0044.assessment1_hitungbahanbakar.databinding.FragmentListdataBinding
 import java.text.FieldPosition
 
-class listFragment : Fragment() {
+class   listFragment : Fragment() {
 
     private val viewModel: listViewModel by lazy {
         val db = DbBahanBakar.getInstance(requireContext())

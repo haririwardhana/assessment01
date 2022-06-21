@@ -11,4 +11,10 @@
         android:title="@string/listData"
         app:showAsAction="never"
         />
+
+    <item
+        android:id="@+id/data_hasil"
+        android:title="@string/datahasil"
+        app:showAsAction="never"
+        />
 </menu>

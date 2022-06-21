@@ -101,6 +101,10 @@ class HitungFragment : Fragment() {
                 findNavController().navigate(R.id.action_hitungFragment_to_listFragment)
             return true
             }
+            R.id.data_hasil ->{
+                findNavController().navigate(R.id.action_hitungFragment_to_dataKonsumsiFragment)
+                return true
+            }
         }
         return super.onOptionsItemSelected(item)
     }

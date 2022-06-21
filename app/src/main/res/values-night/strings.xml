@@ -11,4 +11,6 @@
     <string name="channel_desc">Update Otomatis</string>
     <string name="notif_text">Cek Aplikasi Sekarang</string>
     <string name="notif_title">Ada yang baru nih !</string>
+    <string name="datahasil">Data Lainnya</string>
+
 </resources>
