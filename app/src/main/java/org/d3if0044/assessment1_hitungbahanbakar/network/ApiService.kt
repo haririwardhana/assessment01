@@ -8,7 +8,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 //import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
 
-private const val BASE_URL = "https://raw.githubusercontent.com/haririwardhana/assessment01/Assessment3/"
+private const val BASE_URL = "https://raw.githubusercontent.com/haririwardhana/assessment01/static-api/"
 
     private val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
 
@@ -22,7 +22,7 @@ private const val BASE_URL = "https://raw.githubusercontent.com/haririwardhana/a
     object dataApi {
         val service: ApiService by lazy { retrofit.create(ApiService::class.java) }
 
-            fun getDataUrl(nama: String): String {
-                return "$BASE_URL$nama.png"
+            fun getDataUrl(logoId: String): String {
+                return "$BASE_URL$logoId.png"
             }
         }
